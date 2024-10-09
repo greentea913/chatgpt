@@ -20,4 +20,4 @@ EXPOSE 8080
 ENV PYTHONUNBUFFERED True
 
 # Run the application
-CMD ["python", "app.py"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8080", "main:app"]
